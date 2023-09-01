@@ -1,7 +1,6 @@
 <?php
 
-function blogin_shortcode_function($atts, $content = null){
-global $blogin_plugin_url;
+function login_broker_shortcode_function($atts, $content = null){
 $session_id = session_id();
 $platforms = [];
 if(isset($atts['platforms']) ){
@@ -9,6 +8,10 @@ if(isset($atts['platforms']) ){
     }
 ?>
   
+
+
+<?php ob_start();
+?>
 <style>
     .bl_btns{
         background-color: #3498db;
@@ -22,8 +25,7 @@ if(isset($atts['platforms']) ){
     background-color: #2980b9;
 }
     </style>
-
-<?php ob_start();
+<?php
 if (!is_user_logged_in()){
 foreach ($platforms as $platform) {
    
@@ -44,4 +46,4 @@ $content = ob_get_contents();
 ob_end_clean();
 return $content;
 }
-add_shortcode('login-broker','blogin_shortcode_function');
+add_shortcode('login-broker','login_broker_shortcode_function');

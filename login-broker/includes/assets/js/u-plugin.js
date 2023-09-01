@@ -24,7 +24,7 @@ function handleSessionReceived(sessionId) {
     jQuery.ajax({
         type: 'GET',
         url: my_ajax_object.ajax_url,
-        data: { action: "blogin_ajax_request", sessionId: sessionId },
+        data: { action: "login_broker_ajax_request", sessionId: sessionId },
         success: function (response) {
             if (response.success && response.data.redirect_url) {
                 // Redirect the user to the specified URL

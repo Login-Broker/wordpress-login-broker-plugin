@@ -9,9 +9,9 @@ function init(){
 
    ?>
   <form method="post" action="options.php">
-        <?php settings_fields( 'blogin_setting_group' ); ?>
+        <?php settings_fields( 'login_broker_setting_group' ); ?>
        
-        <?php do_settings_sections( 'blogin_setting_group' ); ?>
+        <?php do_settings_sections( 'login_broker_setting_group' ); ?>
         <table class="form-table">
 
 		
@@ -41,13 +41,13 @@ document.body.removeChild(aux);
 </script>
             <tr valign="top">
             <th scope="row">Tenant Name</th>
-            <td><input style="width:100%; max-width:450px;" type="input" name="blogin_tenant_name" 
-            value="<?php echo get_option('blogin_tenant_name'); ?>" /></td>
+            <td><input style="width:100%; max-width:450px;" type="input" name="login_broker_tenant_name" 
+            value="<?php echo get_option('login_broker_tenant_name'); ?>" /></td>
             </tr>
             <tr valign="top">
             <th scope="row">API Key</th>
-            <td><input style="width:100%; max-width:450px;" type="input" name="blogin_api_key" 
-            value="<?php echo get_option('blogin_api_key'); ?>" /></td>
+            <td><input style="width:100%; max-width:450px;" type="input" name="login_broker_api_key" 
+            value="<?php echo get_option('login_broker_api_key'); ?>" /></td>
             </tr>
           
         </table>
