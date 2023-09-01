@@ -107,7 +107,12 @@ if ($user) {
     // Email exists as a user, log them in
     wp_set_current_user($user->ID);
     wp_set_auth_cookie($user->ID);
+    if (has_action('wp_login')) {
+   do_action('wp_login', $user->user_login);
+} else {
     do_action('wp-login', $user->user_login);
+}
+    
     wp_send_json_success(array('redirect_url' => home_url('/')));
 } else {
     // Email doesn't exist as a user, create a new user and log them in
@@ -119,7 +124,11 @@ if ($user) {
         $user = get_user_by('id', $new_user_id);
         wp_set_current_user($user->ID);
         wp_set_auth_cookie($user->ID);
-        do_action('wp-login', $user->user_login);
+        if (has_action('wp_login')) {
+   do_action('wp_login', $user->user_login);
+} else {
+    do_action('wp-login', $user->user_login);
+}
         wp_send_json_success(array('redirect_url' => home_url('/')));
     } else {
         // Error creating user

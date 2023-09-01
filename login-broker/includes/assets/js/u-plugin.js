@@ -28,7 +28,7 @@ function handleSessionReceived(sessionId) {
         success: function (response) {
             if (response.success && response.data.redirect_url) {
                 // Redirect the user to the specified URL
-                window.location.href = response.data.redirect_url;
+                window.location.reload();
             } else {
                 // Handle errors or other responses
                 console.error('Error or invalid response.');
