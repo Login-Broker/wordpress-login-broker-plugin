@@ -44,4 +44,4 @@ $content = ob_get_contents();
 ob_end_clean();
 return $content;
 }
-add_shortcode('broker-login','blogin_shortcode_function');
+add_shortcode('login-broker','blogin_shortcode_function');

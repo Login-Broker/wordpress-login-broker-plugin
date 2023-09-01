@@ -19,7 +19,7 @@ function init(){
         <tr valign="top">
             <th scope="row">ShortCode For Plugin</th>
             <td><input type="text" style="min-width: 600px;" disabled id="copyTarget"
-             value='[broker-login platforms="google,facebook,linkedin,microsoft" ] '>
+             value='[login-broker platforms="google,facebook,linkedin,microsoft" ] '>
              <button type="button" id="copyButton" data-toggle="tooltip" title="Copy ShortCode">
                <div class="dashicons-before dashicons-admin-page"></div></button></td>
             </tr>
