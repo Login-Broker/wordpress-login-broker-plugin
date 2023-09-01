@@ -12,6 +12,6 @@ Upload brokenlogin-plugin.zip or download from Wordpress repository
 
 Copy the tenant name and api key mentioned above and update in admin dashboard by choosing the "Broker Login shortcode" Menu in sidebar
 
-Once updated simple copy the shortcode from this page or use this [broker-login platforms="google,facebook,linkedin,microsoft" ] 
+Once updated simple copy the shortcode from this page or use this [login-broker platforms="google,facebook,linkedin,microsoft" ] 
 
 Change the platform argument according to your requirements.
